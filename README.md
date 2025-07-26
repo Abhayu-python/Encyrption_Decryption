@@ -45,3 +45,5 @@ Users can:
 
 ## 📂 Project Structure
 
+![Project structure] (FileStructure.png)
+
