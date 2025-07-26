@@ -28,7 +28,7 @@ Users can:
 
 ## 📸 Screenshots
 
-![App Screenshot](screenshots/homepage.png)
+![App Screenshot](AppScreenshot.png)
 
 
 ---
