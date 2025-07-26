@@ -45,5 +45,5 @@ Users can:
 
 ## 📂 Project Structure
 
-![Project structure] (FileStructure.png)
+![App Screenshot](FileStructure.png)
 
