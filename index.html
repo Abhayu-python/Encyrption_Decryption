@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Encryptor & Decryptor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Fira Code', monospace;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: glow 2s infinite;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #00c6ff; }
+      50% { text-shadow: 0 0 15px #00ffff; }
+      100% { text-shadow: 0 0 5px #00c6ff; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    textarea, select {
+      width: 300px;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-size: 1em;
+      background-color: #1a1a2e;
+      color: #00ffcc;
+      border: 1px solid #00ffcc88;
+      box-shadow: 0 0 15px #00ffcc44;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      background-color: #00ffcc;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #00e6b8;
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #ffcc00;
+      animation: fadeIn 2s;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Text Encryptor & Decryptor</h1>
+  <form method="POST" action="/process">
+    <textarea name="text" placeholder="Enter your text here..." required></textarea>
+    <select name="action">
+      <option value="encrypt">Encrypt 🔒</option>
+      <option value="decrypt">Decrypt 🔓</option>
+    </select>
+    <button type="submit">Process</button>
+  </form>
+
+  {% if result %}
+    <div id="result"><strong>Result:</strong> {{ result }}</div>
+  {% endif %}
+</body>
+</html>
