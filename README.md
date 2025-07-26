@@ -47,20 +47,20 @@ Users can:
 
 ![App Screenshot](FileStructure.png)
 
-## Install dependencies:
+# Install dependencies:
 
-# bash
+## bash
 pip install flask
 
-## Run the server:
+# Run the server:
 
-# bash
+## bash
 
 python app.py
 
-## Open in browser:
+# Open in browser:
 
-# cpp
+## cpp
 
 http://127.0.0.1:5000/
 
