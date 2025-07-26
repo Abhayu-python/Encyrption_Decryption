@@ -28,7 +28,8 @@ Users can:
 
 ## 📸 Screenshots
 
-> _You can add screenshots here later to enhance visual documentation._
+![App Screenshot](screenshots/homepage.png)
+
 
 ---
 
